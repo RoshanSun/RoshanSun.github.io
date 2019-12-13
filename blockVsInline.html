@@ -1,0 +1,36 @@
+Block elements include: div, p, h1-h6
+- they take up the entire width of which they're contained in
+- regardless of how much it's using, it still claims the entire width
+- following elements will always come below them
+
+Inline elements only take up as much as they need.
+- includes span, b, i, u, etc.
+
+<div style='border:1px solid red;'>
+    This is a block element.
+</div>
+
+<span style='border:1px solid red;'>
+    This is inline.
+</span>
+
+<p>--</p>
+
+<div style ='border:1px solid blue; width:50%;'>
+    50% blue border
+    <div style='border:2px solid black;'>
+        100%
+    </div>
+
+    <span style='border:1px solid green;'>
+        Only what's needed
+    </span>
+</div>
+
+<span style='border:1px solid yellow;'>
+    Am I beside or below?
+</span>
+
+<div style ='border:1px solid blue; width:50%;'>
+    Another 50% blue
+</div>
