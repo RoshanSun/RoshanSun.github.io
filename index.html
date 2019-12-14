@@ -17,6 +17,28 @@ Now about Lists: <a href="lists.html">here</a>
 <!DOCTYPE html>
 <html>
     <style>
+        #dialogoverlay{
+            display: none;
+            opacity: .8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+        #dialogbox{
+            display: none;
+            position: fixed;
+            background: #000;
+            border-radius: 7px;
+            width: 550px;
+            z-index: 10;
+        }
+        #dialogbox > div{ background:#FFF; margin:8px;}
+        #dialogbox > div > #dialogboxhead{background:#666; font-size:19px; padding:10px; color:#CCC;}
+        #dialogbox > div > #dialogboxbody{background:#333; padding:20px; color:#FFF;}
+        #dialogbox > div > #dialogboxfoot{background:#666; padding:10px; text-align: right;}
         .center {
             margin: 0;
             position: absolute;
@@ -25,10 +47,17 @@ Now about Lists: <a href="lists.html">here</a>
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             }
-        .topright {
+        .github {
             position: absolute;
             top: 12px;
             right: 16px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .email {
+            position: absolute;
+            top: 12px;
+            right: 86px;
             font-size: 15px;
             cursor: pointer;
         }
@@ -48,6 +77,31 @@ Now about Lists: <a href="lists.html">here</a>
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
+    <script>
+        function CustomAlert() {
+            this.render = function(dialog) {
+                var winW = window.innerWidth;
+                var winH = window.innerHeight;
+                var dialogoverlay = document.getElementById('dialogoverlay');
+                var dialogbox = document.getElementById('dialogbox');
+                dialogoverlay.style.display = "block";
+                dialogoverlay.style.height = winH+"px";
+                dialogbox.style.left = (winW/2) - (550 *.5) +"px";
+                dialogbox.style.top = "100px";
+                dialogbox.style.display = "block";
+                document.getElementById('dialogboxhead').innerHTML = "Acknowledge this message";
+                document.getElementById('dialogboxbody').innerHTML = dialog;
+                document.getElementById('dialogboxfoot').innerHTML = '<button onclick="customAlert.ok()">OK</button>';
+            }
+
+            this.ok = function() {
+                document.getElementById('dialogoverlay').style.display = "none";
+                document.getElementById('dialogbox').style.display = "none";
+            }
+        }
+        var customAlert = new CustomAlert();
+    </script>
+    
     <head>
         <title>Learning How to Code</title>
         <script src="basic.js"></script>
@@ -56,11 +110,23 @@ Now about Lists: <a href="lists.html">here</a>
                 <h1 style="font-size: 50pt; color:00FF35;">ROSHAN SUNTHARAN</h1>
             </div>
             
-            <div class="topright" onclick="window.open('https://github.com/RoshanSun');"><b style="color: CACACA;">GITHUB</b></div>
+            <div class="github" onclick="window.open('https://github.com/RoshanSun');"><b style="color: CACACA;">GITHUB</b></div>
+            <div class="email" onclick="customAlert.render('roshan.suntharan@hotmail.com')"><b style="color: CACACA;">EMAIL</b></div>
+
+            <div id="dialogoverlay"></div>
+            <div id="dialogbox">
+                <div>
+                    <div id="dialogboxhead"></div>
+                    <div id="dialogboxbody"></div>
+                    <div id="dialogboxfoot"></div>
+                </div>
+            </div>
     </head>
     <body>
         <p id="mypara">This is a demo paragraph.</p>
         <button type="button" onclick="funcClick()">Click Me!!!</button>
         <button type="button" ondblclick="bobbleDog()">Over Here Big Boy</button>
+
+        <button onclick="customAlert.render('I hate my life')">Bong bong</button>"
     </body>
 </html>
