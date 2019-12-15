@@ -63,17 +63,34 @@ Now about Lists: <a href="lists.html">here</a>
             }
         .github {
             position: absolute;
-            top: 12px;
+            top: 13px;
             right: 16px;
             font-size: 15px;
             cursor: pointer;
         }
         .email {
             position: absolute;
-            top: 12px;
+            top: 13px;
             right: 86px;
             font-size: 15px;
             cursor: pointer;
+        }
+        .resume {
+            position: absolute;
+            top: 13px;
+            right: 156px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        hr {
+            width: 150%;
+            color: #CACACA;
+            height: 1px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:#CACACA;
+            border: 0 none;
+            margin-top: -275px;
         }
         body {
             /*background-image: url('nighttime.jpg');
@@ -126,17 +143,19 @@ Now about Lists: <a href="lists.html">here</a>
             
             <div class="github" onclick="window.open('https://github.com/RoshanSun');"><b style="color: CACACA;">GITHUB</b></div>
             <div class="email" onclick="customAlert.render('roshan.suntharan@hotmail.com')"><b style="color: CACACA;">EMAIL</b></div>
+            <div class="resume" onclick="window.open('Resume.pdf')"><b style="color: CACACA;">RESUME</b></div>
 
             <div id="dialogoverlay"></div>
             <div id="dialogbox">
                 <div>
-                    <div id="dialogboxhead" style=""></div>
+                    <div id="dialogboxhead"></div>
                     <div id="dialogboxbody"></div>
                     <div id="dialogboxfoot"></div>
                 </div>
             </div>
     </head>
     <body>
+        <hr>
         <p id="mypara">This is a demo paragraph.</p>
         <button type="button" onclick="funcClick()">Click Me!!!</button>
         <button type="button" ondblclick="bobbleDog()">Over Here Big Boy</button>
