@@ -1,0 +1,124 @@
+#dialogoverlay{
+    display: none;
+    opacity: .5;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    width: 100%;
+    z-index: 10;
+}
+#dialogbox{
+    display: none;
+    position: fixed;
+    background: #FFF;
+    border-radius: 7px;
+    width: 400px;
+    height: 150px;
+    z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px;}
+#dialogbox > div > #dialogboxhead{background:#FFF; font-size:22px; padding:10px; color:#000; text-align: center;}
+#dialogbox > div > #dialogboxbody{background:#FFF; padding:20px; color:#909090; text-align: center;}
+#dialogbox > div > #dialogboxfoot{background:#FFF; text-align: right;}
+
+.button{
+    background-color: #4AB4DF;
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    text-decoration: aqua;
+}
+.button:hover{background-color: #72C0E0 ;}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    color:#00FF35;
+    }
+.github {
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.email {
+    position: absolute;
+    top: 13px;
+    right: 86px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.resume {
+    position: absolute;
+    top: 13px;
+    right: 156px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.personalProjects {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.randomPage {
+    position: absolute;
+    top: 13px;
+    left: 176px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+hr {
+    border: none;
+    width: 100%;               
+    background-color:#CACACA;
+    color: #CACACA;
+    height: 0.2px;
+    margin-top: 45px;
+}
+
+/* body {
+    background-image: url('nighttime.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(images/bongbong.jpg);
+    image-rendering: pixelated;
+    width: 95%;
+    height: 95%;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+
+html { 
+    background: url(images/bongbong.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

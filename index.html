@@ -1,8 +1,4 @@
-Hello World
-
-<p>Hello. Do you want to view <a href="Resume.pdf">my resume</a> ?</p>
-
-Go check out the next page at <a href="newPage.html">this link</a> :)
+<!-- Go check out the next page at <a href="newPage.html">this link</a> :)
 
 <body>
     <a href="https://www.youtube.com">
@@ -12,100 +8,11 @@ Go check out the next page at <a href="newPage.html">this link</a> :)
 
 Block vs Inline Elements: <a href="blockVsInline.html">here</a>
 More about Div: <a href="div.html">here</a>
-Now about Lists: <a href="lists.html">here</a>
+Now about Lists: <a href="lists.html">here</a> -->
 
 <!DOCTYPE html>
 <html>
-    <style>
-        #dialogoverlay{
-            display: none;
-            opacity: .5;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            background: #000;
-            width: 100%;
-            z-index: 10;
-        }
-        #dialogbox{
-            display: none;
-            position: fixed;
-            background: #FFF;
-            border-radius: 7px;
-            width: 400px;
-            height: 150px;
-            z-index: 10;
-        }
-        #dialogbox > div{ background:#FFF; margin:8px;}
-        #dialogbox > div > #dialogboxhead{background:#FFF; font-size:22px; padding:10px; color:#000; text-align: center;}
-        #dialogbox > div > #dialogboxbody{background:#FFF; padding:20px; color:#909090; text-align: center;}
-        #dialogbox > div > #dialogboxfoot{background:#FFF; text-align: right;}
-
-        .button{
-            background-color: #4AB4DF;
-            padding: 2px;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            width: 50px;
-            text-decoration: aqua;
-        }
-        .button:hover{background-color: #72C0E0 ;}
-
-        .center {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            }
-        .github {
-            position: absolute;
-            top: 13px;
-            right: 16px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        .email {
-            position: absolute;
-            top: 13px;
-            right: 86px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        .resume {
-            position: absolute;
-            top: 13px;
-            right: 156px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        hr {
-            width: 104%;
-            color: #CACACA;
-            height: 1px;
-            background-color:#CACACA;
-            border: none;
-            margin-top: -275px;
-        }
-        body {
-            /*background-image: url('nighttime.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;*/
-
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-image: url(images/bongbong.jpg);
-            image-rendering: pixelated;
-            width: 95%;
-            height: 95%;
-
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <script>
         function CustomAlert() {
             this.render = function(dialog) {
@@ -118,7 +25,7 @@ Now about Lists: <a href="lists.html">here</a>
                 dialogbox.style.left = (winW/2) - (400 *.5) +"px";
                 dialogbox.style.top = (winH/2) - (150 * .5) + "px";
                 dialogbox.style.display = "block";
-                document.getElementById('dialogboxhead').innerHTML = "<b> Email Address</>";
+                document.getElementById('dialogboxhead').innerHTML = "<b> Email Address</b>";
                 document.getElementById('dialogboxbody').innerHTML = dialog;
                 document.getElementById('dialogboxfoot').innerHTML = '<button class="button" onclick="customAlert.ok()">OK</button>';
             }
@@ -136,12 +43,16 @@ Now about Lists: <a href="lists.html">here</a>
         <script src="basic.js"></script>
         
             <div class ="center">
-                <h1 style="font-size: 50pt; color:00FF35;">ROSHAN SUNTHARAN</h1>
+                <h1>ROSHAN SUNTHARAN</h1>
             </div>
             
-            <div class="github" onclick="window.open('https://github.com/RoshanSun');"><b style="color: CACACA;">GITHUB</b></div>
-            <div class="email" onclick="customAlert.render('roshan.suntharan@hotmail.com')"><b style="color: CACACA;">EMAIL</b></div>
-            <div class="resume" onclick="window.open('Resume.pdf')"><b style="color: CACACA;">RESUME</b></div>
+            <div class="github" onclick="window.open('https://github.com/RoshanSun');"><b>GITHUB</b></div>
+            <div class="email" onclick="customAlert.render('roshan.suntharan@hotmail.com')"><b>EMAIL</b></div>
+            <div class="resume" onclick="window.open('Resume.pdf')"><b>RESUME</b></div>
+            <div class="personalProjects" onClick="customAlert.render('NEED TO IMPLEMENT')"><b>PERSONAL PROJECTS</b></div>
+            <div class="randomPage" onClick="customAlert.render('NEED TO IMPLEMENT')"><b>RANDOM PAGE</b></div>
+
+            <hr>
 
             <div id="dialogoverlay"></div>
             <div id="dialogbox">
@@ -153,11 +64,10 @@ Now about Lists: <a href="lists.html">here</a>
             </div>
     </head>
     <body>
-        <hr>
-        <p id="mypara">This is a demo paragraph.</p>
+        <!-- <p id="mypara">This is a demo paragraph.</p>
         <button type="button" onclick="funcClick()">Click Me!!!</button>
         <button type="button" ondblclick="bobbleDog()">Over Here Big Boy</button>
 
-        <button onclick="customAlert.render('I hate my life')">Bong bong</button>"
+        <button onclick="customAlert.render('I hate my life')">Bong bong</button> -->
     </body>
 </html>
