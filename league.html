@@ -2,30 +2,81 @@
 
 <html lang="en-US">
     <link href="leaguePageStyles.css" rel="stylesheet" type="text/css">
+    <script>
+        function CustomAlert() {
+            this.render = function(dialog) {
+                var winW = window.innerWidth;
+                var winH = window.innerHeight;
+                var dialogoverlay = document.getElementById('dialogoverlay');
+                var dialogbox = document.getElementById('dialogbox');
+                dialogoverlay.style.display = "block";
+                dialogoverlay.style.height = winH+"px";
+                dialogbox.style.left = (winW/2) - (400 *.5) +"px";
+                dialogbox.style.top = (winH/2) - (150 * .5) + "px";
+                dialogbox.style.display = "block";
+                document.getElementById('dialogboxhead').innerHTML = "<b> Specialty: </b>";
+                document.getElementById('dialogboxbody').innerHTML = dialog;
+                document.getElementById('dialogboxfoot').innerHTML = '<button class="button" onclick="customAlert.ok()">OK</button>';
+            }
+
+            this.ok = function() {
+                document.getElementById('dialogoverlay').style.display = "none";
+                document.getElementById('dialogbox').style.display = "none";
+            }
+        }
+        var customAlert = new CustomAlert();
+    </script>
     <head>
         <title>All About MMG</title>
     </head>
 
     <body>
-        THIS IS MMG!
+        <div class="mmgTitle" onclick="customAlert.render('We are MMG. We will take NA to Worlds!')"><b>Majestic Mountain Goats</b></div>
+        <div class="shaithan" onclick="window.open('https://na.op.gg/summoner/userName=Shaithan')"><b>Shaithan</b></div>
+        <div class="shaithanPic" onclick="window.open('images/shaithan2.jpg')"><b>(Picture here)</b></div>
+        <div class="udhay" onclick="window.open('https://na.op.gg/summoner/userName=UdhayDog')"><b>Udhay</b></div>
+        <div class="udhayPic" onclick="window.open('images/udhay.jpg')"><b>(Picture here)</b></div>
+        <div class="sayon" onclick="window.open('https://na.op.gg/summoner/userName=Sayon)')"><b>Sayon</b></div>
+        <div class="sayonPic" onclick="window.open('images/sayon.jpg')"><b>(Picture here)</b></div>
+        <div class="shanujan" onclick="window.open('https://na.op.gg/summoner/userName=Shanujan)')"><b>Shanujan</b></div>
+        <div class="shanujanPic" onclick="window.open('images/shanujan.jpg')"><b>(Picture here)</b></div>
+        <div class="crishna" onclick="window.open('https://na.op.gg/summoner/userName=ChrisDavis13 82)')"><b>Crishna</b></div>
+        <div class="crishnaPic" onclick="window.open('images/crishna.jpg')"><b>(Picture here)</b></div>
+        <div class="roshan" onclick="window.open('https://na.op.gg/summoner/userName=Anbuchelvan)')"><b>Roshan</b></div>
+        <div class="roshanPic" onclick="window.open('images/lul.jpg')"><b>(Picture here)</b></div>
 
+        <!-- <a name="Shaithan"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/shaithan2.jpg"/>
+            <img style="position: absolute; top:600px; left:10px; width:250px; height: 250px;" onclick="window.open('https://na.op.gg/summoner/userName=Shaithan')" src="images/shaithan2.jpg"/>
         </div>
+        <a name="Udhay"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/udhay.jpg"/>
+            <img style="position: absolute; top:1000px; left:10px; width:200px; height:300px;" onclick="window.open('https://na.op.gg/summoner/userName=UdhayDog')" src="images/udhay.jpg"/>
         </div>
+        <a name="Sayon"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/sayon.jpg"/>
+            <img style="position: absolute; top:600px; left:600px; width:200px; height:300px;" onclick="window.open('https://na.op.gg/summoner/userName=Sayon')" src="images/sayon.jpg"/>
         </div>
+        <a name="Shanujan"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/shanujan.jpg"/>
+            <img style="position: absolute; top:1000px; left:600px; width:200px; height:300px;" onclick="window.open('https://na.op.gg/summoner/userName=ShAnUjAn05')" src="images/shanujan.jpg"/>
         </div>
+        <a name="Crishna"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/crishna2.jpg"/>
+            <img style="position: absolute; top:600px; right:10px; width:250px; height:250px;" onclick="window.open('https://na.op.gg/summoner/userName=ChrisDavis13 82')" src="images/crishna2.jpg"/>
         </div>
+        <a name="Roshan"></a>
         <div>
-            <img width="350" height="350" title="kill me" src="images/lul.jpg"/>
+            <img style="position: absolute; top:1000px; right:10px; width:250px; height:250px;" onclick="window.open('https://na.op.gg/summoner/userName=Anbuchelvan')" src="images/lul.jpg"/>
+        </div>  -->
+
+        <div id="dialogoverlay"></div>
+        <div id="dialogbox">
+            <div>
+                 <div id="dialogboxhead"></div>
+                <div id="dialogboxbody"></div>
+                <div id="dialogboxfoot"></div>
+            </div>
         </div>
     </body>
 </html>

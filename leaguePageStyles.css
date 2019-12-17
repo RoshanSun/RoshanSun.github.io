@@ -1,3 +1,201 @@
+#dialogoverlay{
+    display: none;
+    opacity: .5;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    width: 100%;
+    z-index: 10;
+}
+#dialogbox{
+    display: none;
+    position: fixed;
+    background: #FFF;
+    border-radius: 7px;
+    width: 400px;
+    height: 150px;
+    z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px;}
+#dialogbox > div > #dialogboxhead{background:#FFF; font-size:22px; padding:10px; color:#000; text-align: center;}
+#dialogbox > div > #dialogboxbody{background:#FFF; padding:20px; color:#909090; text-align: center;}
+#dialogbox > div > #dialogboxfoot{background:#FFF; text-align: right;}
+
+.button{
+    background-color: #4AB4DF;
+    padding: 2px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    text-decoration: aqua;
+}
+.button:hover{background-color: #72C0E0 ;}
+
+.mmgTitle {
+    position: absolute;
+    top: 40px;
+    left: 440px;
+    font-size: 64px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #EA1212;
+}
+.mmgTitle:hover{color: #E74848}
+
+.shaithan {
+    position: absolute;
+    top: 210px;
+    left: 105px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.shaithan:hover {
+    color: #DFDFDF;
+}
+.shaithanPic {
+    position: absolute;
+    top: 250px;
+    left: 135px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.shaithanPic:hover {
+    color: #DFDFDF;
+}
+
+.udhay {
+    position: absolute;
+    top: 420px;
+    left: 120px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.udhay:hover{color: #DFDFDF;}
+.udhayPic {
+    position: absolute;
+    top: 460px;
+    left: 130px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.udhayPic:hover {color: #DFDFDF;}
+
+.sayon {
+    position: absolute;
+    top: 150px;
+    left: 46%;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.sayon:hover{color: #DFDFDF;}
+.sayonPic {
+    position: absolute;
+    top: 190px;
+    left: 46.5%;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.sayonPic:hover {color: #DFDFDF;}
+
+.shanujan {
+    position: absolute;
+    top: 580px;
+    left: 45%;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.shanujan:hover{color: #DFDFDF;}
+.shanujanPic {
+    position: absolute;
+    top: 620px;
+    left: 46.5%;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.shanujanPic:hover {color: #DFDFDF;}
+
+.crishna {
+    position: absolute;
+    top: 210px;
+    right: 105px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.crishna:hover{color: #DFDFDF;}
+.crishnaPic {
+    position: absolute;
+    top: 250px;
+    right: 115px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.crishnaPic:hover {color: #DFDFDF;}
+
+.roshan {
+    position: absolute;
+    top: 420px;
+    right: 105px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.roshan:hover{color: #DFDFDF;}
+.roshanPic {
+    position: absolute;
+    top: 460px;
+    right: 120px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #CACACA;
+}
+.roshanPic:hover {color: #DFDFDF;}
+
+hr {
+    border: none;
+    width: 100%;               
+    background-color:#CACACA;
+    color: #CACACA;
+    height: 1px;
+    margin-top: 45px;
+}
 html { 
     background: url(images/leagueBackdrop.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
